@@ -1,2 +1,5 @@
 primaria:
 hice la primaria en un colegio publico
+
+bachillerato:
+hice el bachillerato en un colegio militar
