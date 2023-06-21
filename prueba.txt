@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Se inicializa la edicion de este archivo desde la rama esteban
+=======
+modificacion daniela del archivo proyecto
+>>>>>>> daniela
