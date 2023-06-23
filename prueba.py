@@ -1,3 +1,0 @@
-print("prueba")
-
-#modificacion daniela 
