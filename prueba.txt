@@ -1,0 +1,3 @@
+primaria: ingrese como novato y pionero a la brigada del cmap
+segundaria: fui brigadiermayor encargado del 3 peloton de la B y comandantes del grupo logistico del cmap
+sena: realice una app  llamada contalsof y realize el fronentd de la app
