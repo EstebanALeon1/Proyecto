@@ -57,6 +57,9 @@ class Aspirante(Usuario):
         objexperiencia=Experiencia(empresa, descripcion, fecha_inicio, fecha_fin, cargo, funciones)
         self.__experiencia.append(objexperiencia)
 
+    def verExperiencia(self):
+        return self.__experiencia
+
 
     def componerEducacion(self):
         institucion =input('Ingrese el nombre de la institucion: ')
@@ -66,4 +69,6 @@ class Aspirante(Usuario):
         objeducacion = Educacion(institucion, fecha_inicio, fecha_fin, tipo_educacion)
         self.__educacion.append(objeducacion)
     
-
+    def verEducacion(self):
+        return self.__educacion
+    
