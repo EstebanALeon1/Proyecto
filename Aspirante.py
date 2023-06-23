@@ -2,8 +2,8 @@ from Usuario import *
 from Experiencia import *
 from Educacion import *
 class Aspirante(Usuario):
-    def __init__(self, documento, nombre, correo, contraseña,telefono):
-        Usuario.__init__(self,documento,nombre, correo, contraseña, telefono)
+    def __init__(self, documento, nombre, correo, contraseña,telefono, ubicacion):
+        Usuario.__init__(self,documento,nombre, correo, contraseña, telefono, ubicacion)
         self.__documento = documento
         self.__nombre  = nombre
         self.__correo = correo
@@ -11,7 +11,7 @@ class Aspirante(Usuario):
         self.__telefono = telefono
         self.__experiencia = []
         self.__educacion = []
-    
+        self.__ubicacion = ubicacion
     def setDocumento(self,documento):
         self.__documento = documento 
    
@@ -72,3 +72,9 @@ class Aspirante(Usuario):
     def verEducacion(self):
         return self.__educacion
     
+
+    def setUbicacion(self,ubicacion):
+        self.__ubicacion = ubicacion
+         
+    def getTelefono(self):
+        return self.__ubicacion
