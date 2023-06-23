@@ -1,7 +1,9 @@
 from Usuario import *
+from Experiencia import *
+from Educacion import *
 class Aspirante(Usuario):
     def __init__(self, documento, nombre, correo, contraseña,telefono):
-        Usuario.__init__(self, documento, nombre, correo, contraseña, telefono)
+        Usuario.__init__(self,documento,nombre, correo, contraseña, telefono)
         self.__documento = documento
         self.__nombre  = nombre
         self.__correo = correo
@@ -45,10 +47,23 @@ class Aspirante(Usuario):
         return self.__telefono
     
     
-    def agregarExperiencia(self,experiencia):
-        self.__experiencia.append(experiencia)
-        
-    def agregarEducacion(self,educacion):
-        self.__educacion.append(educacion)
+    def componerExperiencia(self):
+        empresa=input('Ingrese nombre de la empresa: ')
+        descripcion=input('Ingrese la descripcion de la experiencia: ')
+        fecha_inicio=input('Ingrese la fecha de inicio de la experiencia: ')
+        fecha_fin=input('Ingrese la fecha de finalizacion de la experiencia: ')
+        cargo=input('Ingrese el cargo que desempeño durante la experiencia: ')
+        funciones=input('Ingrese las funciones que hacia durante la experiencia: ')
+        objexperiencia=Experiencia(empresa, descripcion, fecha_inicio, fecha_fin, cargo, funciones)
+        self.__experiencia.append(objexperiencia)
+
+
+    def componerEducacion(self):
+        institucion =input('Ingrese el nombre de la institucion: ')
+        fecha_inicio=input('Ingrese la fecha de inicio de la educacion: ')
+        fecha_fin=input('Ingrese la fecha de finalizacion de la educacion: ')
+        tipo_educacion=input('Ingrese el tipo de educacion: ')
+        objeducacion = Educacion(institucion, fecha_inicio, fecha_fin, tipo_educacion)
+        self.__educacion.append(objeducacion)
     
 
