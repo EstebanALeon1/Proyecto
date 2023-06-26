@@ -14,36 +14,37 @@ class Experiencia:
         return self.__empresa
     
     
-    def setNombre(self,nombre):
-        self.__nombre=nombre
+    def setDescripcion(self, descripcion):
+        self.__descripcion = descripcion
              
-    def getNombre(self):
-        return self.__nombre
+    def getDescripcion(self):
+        return self.__descripcion
     
     
-    def setCorreo(self,correo):
-        self.__correo = correo
+    def setfecha_inicio(self,fecha_inicio):
+        self.__fecha_inicio = fecha_inicio
             
-    def getCorreo(self):
-        return self.__correo
+    def getfecha_inicio(self):
+        return self.__fecha_inicio
     
     
-    def setContraseña(self,contraseña):
-        self.__contraseña = contraseña
+    def setFecha_fin(self, fecha_fin):
+        self.__fecha_fin = fecha_fin
         
-    def getContraseña(self):
-        return self.__contraseña
+    def getFecha_fin(self):
+        return self.__fecha_fin
     
     
-    def setTelefono(self,telefono):
-        self.__telefono = telefono
+    def setCargo(self,cargo):
+        self.__cargo = cargo
          
-    def getTelefono(self):
-        return self.__telefono
+    def getCargo(self):
+        return self.__cargo
     
     
-    def agregarExperiencia(self,experiencia):
-        self.__experiencia.append(experiencia)
-        
-    def agregarEducacion(self,educacion):
-        self.__educacion.append(educacion)
+    def setfunciones(self,funciones):
+        self.__funciones = funciones
+         
+    def getfunciones(self):
+        return self.__funciones
+   

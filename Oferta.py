@@ -67,4 +67,5 @@ class Oferta:
     def getN_postulaciones(self):
         return self.__tipo_empleo
     
-    
+    def aumentar_postulaciones(self, n_postulaciones):
+        n_postulaciones += 1
