@@ -1,6 +1,7 @@
 from Usuario import *
 from Oferta import *
 class Empresa(Usuario):
+    listaofertas = []
     def __init__(self, documento, nombre, correo, contraseña, telefono,ubicacion):
         Usuario.__init__(documento, nombre, correo, contraseña, telefono, ubicacion)
         self.__documento = documento
@@ -55,10 +56,10 @@ class Empresa(Usuario):
         salario=input('Ingrese el salario ofrecido: ')
         tipo_empleo=input('Ingrese el tipo de empleo: ')
         objoferta=Oferta(nombre, tipo_contrato, n_vacantes, n_postulaciones, salario, tipo_empleo)
-        self.__oferta.append(objoferta)
+        Empresa.listaofertas.append(objoferta)
 
-    def verExperiencia(self):
-        return self.__experiencia
+    def verOferta(self):
+        return self.__oferta
     
 
     def setUbicacion(self,ubicacion):
@@ -66,4 +67,22 @@ class Empresa(Usuario):
          
     def getTelefono(self):
         return self.__ubicacion
+    
+
+
+
+    def componerEmpresa(self):
+        documento = input("Ingrese su número de documento: ")
+        nombre = input("Ingrese su nombre completo: ")
+        correo = input("Ingrese su correo electrónico: ")
+        contraseña = input("Ingrese una contraseña: ")
+        telefono = input("Ingrese su número de teléfono: ")
+        ubicacion = input("Ingrese su ubicación: ")
+
+        empresa = Empresa(documento, nombre, correo, contraseña, telefono, ubicacion)
+        Empresa.empresalista.append(empresa)
+    
+    
+    def verEmpresa(self):
+        return self.empresalista
     

@@ -12,6 +12,7 @@ class Aspirante(Usuario):
         self.__experiencia = []
         self.__educacion = []
         self.__ubicacion = ubicacion
+        self.__aspirante = []
     def setDocumento(self,documento):
         self.__documento = documento 
    
@@ -78,3 +79,20 @@ class Aspirante(Usuario):
          
     def getTelefono(self):
         return self.__ubicacion
+    
+
+
+    def componerAspirante(self):
+        documento = input("Ingrese su número de documento: ")
+        nombre = input("Ingrese su nombre completo: ")
+        correo = input("Ingrese su correo electrónico: ")
+        contraseña = input("Ingrese una contraseña: ")
+        telefono = input("Ingrese su número de teléfono: ")
+        ubicacion = input("Ingrese su ubicación: ")
+
+        aspirante = Aspirante(documento, nombre, correo, contraseña, telefono, ubicacion)
+        Aspirante.aspirantelista.append(aspirante)
+    
+    
+    def verAspirante(self):
+        return self.aspirantelista
