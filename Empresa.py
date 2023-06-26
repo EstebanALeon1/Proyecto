@@ -82,7 +82,10 @@ class Empresa(Usuario):
         empresa = Empresa(documento, nombre, correo, contraseña, telefono, ubicacion)
         Empresa.empresalista.append(empresa)
     
-    
+     
     def verEmpresa(self):
         return self.empresalista
+    
+
+
     
